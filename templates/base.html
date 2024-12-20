@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title> 
+    <meta name="description" itemprop="about" content="{{config.description}}" />
+    <link rel="stylesheet" href="{{ get_url(path='styles.css') | safe }}" />
+  </head>
+  <body>
+    <div class="page">
+      <a href="{{ config.base_url }}">Home</a> &nbsp;
+      <a href="{{ config.base_url }}about/">About</a> &nbsp;
+      <a href="{{ config.base_url }}atom.xml">Feed</a>
+      {% block content %} {% endblock content %} 
+      <div class="footer">
+        Copyright © 2024 Sahil Gautam - Licensed under CC BY-SA 4.0 (Attribution-ShareAlike 4.0 International)
+      </div>
+    </div>
+  </body>
+</html>

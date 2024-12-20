@@ -1,0 +1,72 @@
+// Custom CSS code goes here
+
+.page {
+  display: block;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+  background: white;
+  box-sizing: border-box;  /* Ensure padding is included in the width/height */box-shadow: 0 2px 2px rgba(0,0,0,0.5);
+}
+
+.agenda {
+  font: bold 80px/0.9 iosevka;
+  display: block;
+  font-size: 26px;
+  color: #333;
+}
+
+.title {
+  font: bold 80px/0.9 Roboto;
+  color: #583799;
+  -webkit-text-stroke-width: 1px;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  -webkit-text-stroke-color: #224;
+}
+
+.brief {
+  font: bold 80px/0.9 Roboto;
+  font-size: 20px;
+  white-space: nowrap;
+  margin-left: 5pt;
+  color: #aaa;
+  margin-bottom: 2rem;
+}
+
+body {
+  background: #999;
+  font: normal 18px/1.45 et-book;
+  color: #333;
+  width: 100%;
+  text-align: justify;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #222;
+  margin: 0 0 20px;
+  text-align: left;
+  font: normal 14pt/1.45 et-book;
+
+  border: 0;
+  border-bottom: 1px solid #ccc; /* Style the line */
+  margin-bottom: 1rem; /* Optional, you can adjust the spacing */
+}
+
+h1 { font-size: 2.0rem;}
+h2 { font-size: 1.7rem;}
+h3 { font-size: 1.4rem;}
+h4 { font-size: 1.0rem;}
+
+.footer {
+  font-size: 15px;
+  text-align: center;
+  border-top: 1px solid #ccc; /* Adjust color and thickness as needed */
+  padding-top: 3px; /* Optional: adds space between the border and the text */
+}
+

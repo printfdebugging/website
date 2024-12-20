@@ -1,0 +1,55 @@
+// Variables
+$font-color: #202020;
+$bg-color: #fff;
+$border-color: #e5e5e5;
+$section-width: 500px;
+$header-width: 270px;
+$footer-width: 270px;
+$wrapper-width: 860px;
+$link-color: #267cb9;
+$link-color-hover: #069;
+$font-color-small: #777;
+$font-color-code: #333;
+$font-size-small: 11px;
+$font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-code:
+  Monaco,
+  Bitstream Vera Sans Mono,
+  Lucida Console,
+  Terminal,
+  Consolas,
+  Liberation Mono,
+  DejaVu Sans Mono,
+  Courier New,
+  monospace;
+
+$media-max-width: 960px;
+$media-max-width-smaller: 720px;
+$media-max-width-even-smaller: 480px;
+
+// note
+// note-neutral
+$note-neutral-background: #f3f3f3;
+$note-neutral-border: #858585;
+// note-ok
+$note-ok-background: #DFD;
+$note-ok-border: #4CAF50;
+// note-warning
+$note-warning-background: #FFF9E3;
+$note-warning-border: #DBAE26;
+// note-error
+$note-error-background: #FFE7E7;
+$note-error-border: #C62E2E;
+// note-info
+$note-info-background: #dff5ff;
+$note-info-border: #454ec5;
+
+@font-face {
+  font-family: iosevka;
+  src: url(IosevkaNerdFont-Regular.ttf);
+}
+
+@font-face {
+  font-family: et-book;
+  src: url(et-book-roman-old-style-figures.ttf);
+}

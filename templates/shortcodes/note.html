@@ -1,0 +1,13 @@
+{% if not display %}{% set display="both" %}{% endif %}
+{% if not type %}{% set type="neutral" %}{% endif %}
+{% if not size %}{% set size="small" %}{% endif %}
+
+<div class="note
+{%- if display == 'icon' %} note-icon note-icon-{{size}} note-icon-{{type}}
+{%- elif display == 'block' %} note-block note-{{type}}
+{%- elif display == 'both' %} note-icon note-icon-{{size}} note-icon-{{type}} note-block note-{{type}}
+{%- endif %}">
+{% if markdown %}{{ body | markdown | safe }}
+{% else %}{{ body | safe }}
+{% endif %}
+</div>
