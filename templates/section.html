@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+<!-- add title with rss icon -->
+{% block heading %} 
+  <h1>
+    {{ section.title }}
+    <a href="{{ section.permalink }}atom.xml"><img width=20 src="/rss.png" alt="feed"></a>
+  </h1>
+{% endblock heading %} 
+
+<!-- add links to pages -->
+{% block content %}
+  {{ section.content | safe }}
+  <ul>
+    {% for page in section.pages -%}
+      <li>{{page.date}}&nbsp; <a href="{{page.permalink}}">{{page.title}}</a></li>
+    {%- endfor %}
+  </ul>
+{% endblock content %}
+
+

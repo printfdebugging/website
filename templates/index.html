@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+<!-- title add atom.xml file -->
+{% block heading %} 
+  <h1>
+    {{ section.title }}
+    <a href="{{ section.permalink }}atom.xml"><img width=20 src="/rss.png" alt="feed"></a>
+  </h1>
+{% endblock heading %} 
+
+<!-- add content -->
+{% block content %}
+  {{ section.content | safe }}
+  <ul>
+    {% for subsection in section.subsections -%}
+      {%- set subsection_object = get_section(path=subsection, metadata_only=true) -%}
+      <li> <a href="{{ subsection_object.permalink }}">{{ subsection_object.title }}</a> </li>
+    {%- endfor %}
+  </ul>
+{% endblock content %}
+
+
