@@ -6,6 +6,8 @@ pages:
     # - ./scripts/build-graphics.sh
     - echo "$HOME"
     - echo "$(pwd)"
+    - echo "$USER"
+    - cd "/home/$USER/" && ls -al
     - ls -al
   publish: public
   only:
