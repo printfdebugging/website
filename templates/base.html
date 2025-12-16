@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {% if page %}
+            {% if page.permalink | safe == get_url(path='/') %}
+                <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+            {% endif %}
+        {% endif %}
+        <meta name="description" itemprop="about" content="{{config.description}}" />
+        <link rel="stylesheet" href="{{ get_url(path='styles.css') | safe }}" />
+        <link rel="icon" type="image/x-icon" href="/logo.png" style="border-radius: 50%;">
+    </head>
+    <body>
+    <div class="menubar">
+        <a style="margin-right: auto;" href="/"><img class="footer-image logo" src="/logo.png"></a>
+        <a href="https://git.kescher.at/printfdebugging" target="_blank"><img class="footer-image" src="/forgejo.svg" alt=""/></a>
+        <a href="https://codeberg.org/printfdebugging" target="_blank"><img class="footer-image" src="/codeberg.png" alt=""/></a>
+        <a href="https://git.gay/printfdebugging" target="_blank"><img class="footer-image" src="/gitgay.png" alt=""/></a>
+        <a href="https://gitlab.com/printfdebugging" target="_blank"><img class="footer-image" src="/gitlab.svg" alt=""/></a>
+        <a href="https://github.com/printfdebugging" target="_blank"><img class="footer-image" src="/github.png" alt=""/></a>
+        <a href="https://gerrit.libreoffice.org/q/owner:sahil.gautam@collabora.com" target="_blank"><img class="footer-image" src="/gerrit.svg" alt=""></a>
+        <a href="https://printfdebugging.itch.io" target="_blank"><img class="footer-image" src="/itch.svg" alt=""></a>
+..
+        <a href="mailto:printfdebugging@gmail.com" target="_blank"><img class="footer-image" src="/mail.png" alt=""/></a>
+        <a href="irc://irc.libera.chat/printfdebugging"><img class="footer-image" src="/irc.svg"></a> 
+        <a href="https://matrix.to/#/@noprintfdebugging:matrix.org"><img class="footer-image" style="width: 14px! important;" src="/element.webp"></a> 
+..
+        <a href="https://mastodon.gamedev.place/@printfdebugging" target="_blank"><img class="footer-image" src="/mastodon.svg" alt=""/></a>
+        <a href="https://x.com/printfdebugging" target="_blank"><img class="footer-image" style="width: 19px !important;" src="/x.svg" alt=""/></a>
+        <a href="https://www.reddit.com/user/noprintfdebugging/" target="_blank"><img class="footer-image" style="width: 17px !important;" src="/reddit.png" alt=""/></a>
+        <a href="https://news.ycombinator.com/user?id=printfdebugging" target="_blank"><img class="footer-image" style="width: 18px !important;" src="/yn.svg" alt=""/></a>
+        <a href="https://www.linkedin.com/in/printfdebugging/" target="_blank"><img class="footer-image"  src="/linkedin.svg" alt=""/></a>
+..
+        <a href="/gpg.asc"><img src="/key.png" style="width: 17px; margin-top: 6px;"></a> 
+        <a href="/atom.xml"><img class="footer-image" src="/rss.png"></a> </h3>
+    </div>
+        <div class="wrapper">
+            {% block content %} {% endblock content %}
+            <br>
+            <div class="footer">
+                <small>
+                    Copyright (c) 2025 Sahil Gautam. All Rights Reserved.
+                </small>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+# Site's URL. Please include trailing "/".
+base_url = "https://printfdebugging.in/"
+title = "printfdebugging"
+description = "Sahil Gautam's Blog"
+
+compile_sass = true
+build_search_index = false
+generate_feeds = true
+minify_html = false
+feed_limit = 1000
+
+[markdown]
+highlight_code = true
+highlight_theme = "one-dark"
+
+[extra]
+sections = [
+    "graphics/_index.md",
+    "programming/_index.md",
+    "blog/_index.md",
+    "communication/_index.md",
+]

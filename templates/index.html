@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% set sections = config.extra.sections %}
+    {% for sectione in sections %}
+        {% set section = get_section(path=sectione) %}
+        {% set pages = section.pages %}
+        <h1>{{ section.title }} <a style="display:inline;" href="{{ section.path }}atom.xml"><img class="footer-image" src="/rss.png"></a> </h1>
+        {{ section.content | indent | safe }}
+            {% if pages | length != 0 %}
+                <div class="index">
+                    <ul>
+                        {% for page in pages %}
+                        <li>
+                            {{ page.date }} - <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+                            <br/>
+                            {{ page.description }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+    {% endfor %}
+{% endblock content %}
