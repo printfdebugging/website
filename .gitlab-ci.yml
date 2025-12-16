@@ -1,14 +1,9 @@
 image: archlinux:latest
 pages:
   script:
-    # - pacman -Syu zola cmake make ninja emscripten git --noconfirm
-    # - ./scripts/generate-graphics.sh
-    # - ./scripts/build-graphics.sh
-    - echo "$HOME"
-    - echo "$(pwd)"
-    - echo "$USER"
-    - cd "/home/$USER/" && ls -al
-    - ls -al
+    - pacman -Syu zola cmake make ninja emscripten git --noconfirm
+    - ./scripts/generate-graphics.sh
+    - ./scripts/build-graphics.sh
   publish: public
   only:
     - main
