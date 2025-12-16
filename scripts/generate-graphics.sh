@@ -19,6 +19,12 @@ git clone --depth 1 \
     "$GRAPHICS_PROJECT_UPSTREAM" \
     "$GRAPHICS_PROJECT_DIR"
 
+(
+    cd "$GRAPHICS_PROJECT_DIR"
+    git submodule init
+    git submodule update --recursive
+)
+
 for tutorialDir in $(find "${GRAPHICS_PROJECT_DIR}/source/tutorials/" -mindepth 1 -maxdepth 1 -type d); do
     # step 1: check if the tutorials have a readme
     [ -f "${tutorialDir}/README.md" ] || {
