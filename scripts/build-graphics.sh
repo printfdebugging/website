@@ -22,6 +22,8 @@ WEBSITE_PUBLIC_DIR="/builds/printfdebugging/website/public"
 #     "$GRAPHICS_PROJECT_UPSTREAM" \
 #     "$GRAPHICS_PROJECT_DIR"
 
+source /etc/profile.d/emscripten.sh
+
 emcmake cmake \
     -DUSE_GENERATED_INDEX_HTML=TRUE \
     -DGENERATED_GRAPHICS_DIR_PATH="${WEBSITE_PUBLIC_DIR}" \
