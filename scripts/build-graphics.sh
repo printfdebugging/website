@@ -1,7 +1,6 @@
 #!/bin/bash
 
 dependencies=(
-    emcmake
     cmake
     make
     git
@@ -24,7 +23,7 @@ WEBSITE_PUBLIC_DIR="/builds/printfdebugging/website/public"
 
 source /etc/profile.d/emscripten.sh
 
-/usr/lib/emscripten/emcmake cmake \
+emcmake cmake \
     -DUSE_GENERATED_INDEX_HTML=TRUE \
     -DGENERATED_GRAPHICS_DIR_PATH="${WEBSITE_PUBLIC_DIR}" \
     -S "${GRAPHICS_PROJECT_DIR}" -B "${GRAPHICS_PROJECT_DIR}/build"
