@@ -15,7 +15,7 @@ GRAPHICS_PROJECT_DIR="/builds/printfdebugging/website/learnopengl"
 WEBSITE_DIR="/builds/printfdebugging/website"
 GRAPHICS_PROJECT_UPSTREAM="https://gitlab.com/printfdebugging/learnopengl.git"
 
-git clone --depth 1 \
+[ ! -d "$GRAPHICS_PROJECT_DIR" ] && git clone --depth 1 \
     "$GRAPHICS_PROJECT_UPSTREAM" \
     "$GRAPHICS_PROJECT_DIR"
 
@@ -23,6 +23,9 @@ git clone --depth 1 \
     cd "$GRAPHICS_PROJECT_DIR"
     git submodule init
     git submodule update --recursive
+
+    [ -d "$GRAPHICS_PROJECT_DIR/build" ] && rm -rf "$GRAPHICS_PROJECT_DIR/install"
+    [ -d "$GRAPHICS_PROJECT_DIR/install" ] && rm -rf "$GRAPHICS_PROJECT_DIR/install"
 )
 
 for tutorialDir in $(find "${GRAPHICS_PROJECT_DIR}/source/tutorials/" -mindepth 1 -maxdepth 1 -type d); do
@@ -39,6 +42,8 @@ for tutorialDir in $(find "${GRAPHICS_PROJECT_DIR}/source/tutorials/" -mindepth 
     # step 3: copy the file to content/graphics
     dirName="$(basename "$tutorialDir")"
     mkdir -p "${WEBSITE_DIR}/content/graphics/${dirName}"
+
+    echo "copying ${tutorialDir}/README.md to ${WEBSITE_DIR}/content/graphics/${dirName}/index.md"
     cp "${tutorialDir}/README.md" "${WEBSITE_DIR}/content/graphics/${dirName}/index.md"
 done
 

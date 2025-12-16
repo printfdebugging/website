@@ -25,7 +25,7 @@ source /etc/profile.d/emscripten.sh
 
 emcmake cmake \
     -DUSE_GENERATED_INDEX_HTML=TRUE \
-    -DGENERATED_GRAPHICS_DIR_PATH="${WEBSITE_PUBLIC_DIR}" \
+    -DGENERATED_GRAPHICS_DIR_PATH="${WEBSITE_PUBLIC_DIR}/graphics" \
     -S "${GRAPHICS_PROJECT_DIR}" -B "${GRAPHICS_PROJECT_DIR}/build"
 
 cmake --build "${GRAPHICS_PROJECT_DIR}/build"
