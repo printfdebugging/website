@@ -1,2 +1,6 @@
 public/
+
+# everything in the graphics directory is generated with ./scripts/build-graphics.sh,
+# except for the _index.md file. that's why we just ignore everything else.
+content/graphics/*
 tags

@@ -1,8 +1,9 @@
-image: alpine:latest
+image: archlinux:latest
 pages:
   script:
-    - apk add --update-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/community/ zola
-    - zola build
+    - pacman -Syu zola cmake make ninja emscripten git
+    - ./scripts/generate-graphics.sh
+    - ./scripts/build-graphics.sh
   publish: public
   only:
     - main
