@@ -15,7 +15,7 @@ highlight_theme = "one-dark"
 
 [extra]
 sections = [
-    "graphics/_index.md",
+    # "graphics/_index.md",
     "programming/_index.md",
     "blog/_index.md",
     "communication/_index.md",
